@@ -1,0 +1,12 @@
+Línea 9: tipo boolean esta mal escrito. Cambio de booleaN a boolean.
+Línea 9: no se le puede asignar un valor de tipo int a una variable boolean. Cambio la asignación de 0 por la de false.
+Línea 10: el número 128 sobrepasa el rango del tipo de variable byte. Cambio de tipo byte a tipo short.
+Línea 11: el número -32769 sobrepasa el rango del tipo de variable short. Cambio de tipo short a tipo int.
+Línea 14: la variable discriminante esta mal escrita. Cambio de Discriminante por discriminante.
+Línea 14: se está tratando de asignar un valor de tipo double a una variable de tipo long. Cambio del tipo de la variable x1 de long a double.
+Línea 17: el tipo de dato char está mal escrito en la declaración de las variables ch1 y ch2. Cambio de Char por char.
+Línea 18: se le está tratando de asignar un valor a una variable que no ha sido declarada posiblemente por un error al escribir ch1. Cambio de ch a ch1.
+Línea 18: Se esta asignando una valor a una variable de tipo char mediante el uso de comillas. Cambio de las comillas por los apostrofes para asignarle el caracter w a la variable ch2.
+
+error en tiempo de ejecución:
+Línea 19: Se esta dividiendo uno entre cero ya que a la variable a se le asignó el valor 3. Se va a colocar un if  para que la división de la línea 19 solo se realice cuando el divisor no sea 0.
