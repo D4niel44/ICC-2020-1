@@ -1,0 +1,4 @@
+En el archivo PrePost se imprime el número 17 doble porque en la línea 10 se utiliza el operador de posdecremento por lo tanto el valor de la variable x se disminuye después de que esta se imprime en la instrucción en la línea 10 a diferencia de la línea  9 donde se usa el de predecremento y esta disminuye su valor antes de imprimirse en pantalla.
+
+
+En el archivo Operadores la primera división se imprime de sin decimales y no se redondea porque al dividir dos números enteros el resultado se toma como entero y lo que hace el programa es truncar el resultado y solo deja el resultado hasta el valor de las unidades. La segunda división que imprime está dividiendo un número real entre un entero y java supone que como el dividendo es de tipo double el resultado también va a ser de tipo double y realiza la división completamente. 
