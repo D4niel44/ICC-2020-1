@@ -50,11 +50,16 @@ public class Temperatura {
 
     public boolean esIgual(Temperatura temp) {
 
-	return = escala == temp.escala && valor == temp.valor;
+	return escala == temp.escala && valor == temp.valor;
     }
 
     public boolean esMayor(Temperatura temp) {
 
 	return obtenerTemperaturaenCelsius() > temp.obtenerTemperaturaenCelsius();
+    }
+
+    public boolean esMenor(Temperatura temp) {
+
+	return obtenerTemperaturaenCelsius() < temp.obtenerTemperaturaenCelsius();
     }
 }
