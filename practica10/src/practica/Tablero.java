@@ -1,12 +1,10 @@
 package practica;
 
 import processing.core.PApplet;
-import java.awt.Toolkit;
-import java.awt.Dimension;
 
 public class Tablero extends PApplet {
 
-	private static int ancho, largo;
+	private static int ancho;
 
 	public static void main(String[] args) {
 
@@ -15,10 +13,14 @@ public class Tablero extends PApplet {
 
 	@Override
 	public void settings() {
-		ancho = Toolkit.getDefaultToolkit().getScreenSize().width / 2;
-		largo = Toolkit.getDefaultToolkit().getScreenSize().width / 2;
-
-		size(ancho, largo);
+		
+		if (displayWidth > displayHeight) {
+			ancho = displayWidth / 2;
+		} else {
+			ancho = displayHeight / 2;
+		}
+		
+		size(ancho, ancho);
 	}
 
 	@Override
@@ -30,7 +32,7 @@ public class Tablero extends PApplet {
 	public void draw() {
 
 		int color = 0;
-		for (int l = 0; l < largo; l += largo / 8) {
+		for (int l = 0; l < ancho; l += ancho / 8) {
 
 			for (int a = 0; a < ancho; a += ancho / 8) {
 
@@ -41,7 +43,7 @@ public class Tablero extends PApplet {
 					fill(0xFF000000);
 				}
 
-				rect(a, l, ancho / 8, largo / 8);
+				rect(a, l, ancho / 8, ancho / 8);
 				color++;
 			}
 
