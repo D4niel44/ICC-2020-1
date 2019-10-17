@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="alglin.PruebaMatriz" tests="8" skipped="0" failures="0" errors="0" timestamp="2019-10-17T17:14:50" hostname="Thinnote-14" time="0.45">
+  <properties/>
+  <testcase name="probarToString()" classname="alglin.PruebaMatriz" time="0.193"/>
+  <testcase name="probarEliminarColumna()" classname="alglin.PruebaMatriz" time="0.038"/>
+  <testcase name="probarSuma()" classname="alglin.PruebaMatriz" time="0.014"/>
+  <testcase name="probarConstructor()" classname="alglin.PruebaMatriz" time="0.009"/>
+  <testcase name="probarObtenerYAsignar()" classname="alglin.PruebaMatriz" time="0.014"/>
+  <testcase name="probarEliminarFila()" classname="alglin.PruebaMatriz" time="0.038"/>
+  <testcase name="probarEscalar()" classname="alglin.PruebaMatriz" time="0.011"/>
+  <testcase name="probarDeterminante()" classname="alglin.PruebaMatriz" time="0.104"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
