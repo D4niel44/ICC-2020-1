@@ -14,38 +14,21 @@ public class Dama extends Pieza {
         LinkedList<Posicion> jugadas = new LinkedList<>();
         Tablero tab = Tablero.obtenerInstancia();
 
-        int i = 0;
-        int j = 0;
-        for (int c = 0; c < 8; c++) {
-            if (c % 4 == 0) {
-                i = -1;
-                j = -1;
-            }
-            if (c % 4 == 1) {
-                i = -1;
-                j = 0;
-            }
-            if (c % 4 == 2) {
-                i = 1;
-                j = -1;
-            }
-            if (c % 4 == 3) {
-                i = 0;
-                j = 1;
-            }
-            if (c >= 4) {
-                i = -i;
-                j = -j;
-            }
-            for (int fila = obtenerPosicion().obtenerFila() + i, columna = obtenerPosicion().obtenerColumna() + j; fila >= 0
-                    && fila <= 7 && columna >= 0 && columna <= 7; fila += i, columna += j) {
-                if (tab.obtenerPieza(fila, columna) != null) {
-                    if (tab.obtenerPieza(fila, columna).obtenerColor() != this.obtenerColor()) {
+        for (int i = -1; i <= 1; i++) {
+            for (int j = -1; j <= 1; j++) {
+                for (int fila = obtenerPosicion().obtenerFila() + i, columna = obtenerPosicion().obtenerColumna()
+                        + j; fila >= 0 && fila <= 7 && columna >= 0 && columna <= 7; fila += i, columna += j) {
+                    if (tab.obtenerPieza(fila, columna) != null) {
+                        if (tab.obtenerPieza(fila, columna).obtenerColor() != this.obtenerColor()) {
+                            jugadas.add(new Posicion(fila, columna));
+                        }
+                        break;
+                    } else {
                         jugadas.add(new Posicion(fila, columna));
                     }
-                    break;
-                } else {
-                    jugadas.add(new Posicion(fila, columna));
+                }
+                if (i == 0) {
+                    j++;
                 }
             }
         }
